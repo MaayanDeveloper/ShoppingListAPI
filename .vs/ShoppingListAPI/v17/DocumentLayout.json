@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "T:\\Group A\\C#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\ShoppingListAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{618C66CD-3834-4B90-B17E-8CAC30DC3456}|ShoppingListAPI\\ShoppingListAPI.csproj|t:\\group a\\c#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\shoppinglistapi\\shoppinglistapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{618C66CD-3834-4B90-B17E-8CAC30DC3456}|ShoppingListAPI\\ShoppingListAPI.csproj|solutionrelative:shoppinglistapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56287673-2110-4213-973C-668518833776}|ShoppingListAPI.core\\ShoppingListAPI.Core.csproj|t:\\group a\\c#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\shoppinglistapi\\shoppinglistapi.core\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56287673-2110-4213-973C-668518833776}|ShoppingListAPI.core\\ShoppingListAPI.Core.csproj|solutionrelative:shoppinglistapi.core\\repositories\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA0CBB27-0B5B-4836-9B31-6F4212910BEF}|ShoppingListAPI.Data\\ShoppingListAPI.Data.csproj|t:\\group a\\c#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\shoppinglistapi\\shoppinglistapi.data\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA0CBB27-0B5B-4836-9B31-6F4212910BEF}|ShoppingListAPI.Data\\ShoppingListAPI.Data.csproj|solutionrelative:shoppinglistapi.data\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA0CBB27-0B5B-4836-9B31-6F4212910BEF}|ShoppingListAPI.Data\\ShoppingListAPI.Data.csproj|t:\\group a\\c#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\shoppinglistapi\\shoppinglistapi.data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA0CBB27-0B5B-4836-9B31-6F4212910BEF}|ShoppingListAPI.Data\\ShoppingListAPI.Data.csproj|solutionrelative:shoppinglistapi.data\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1582241A-BB37-4FAC-8EE5-C35FABA2E739}|ShoppingListAPI.Service\\ShoppingListAPI.Service.csproj|t:\\group a\\c#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\shoppinglistapi\\shoppinglistapi.service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1582241A-BB37-4FAC-8EE5-C35FABA2E739}|ShoppingListAPI.Service\\ShoppingListAPI.Service.csproj|solutionrelative:shoppinglistapi.service\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "T:\\Group A\\C#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\ShoppingListAPI\\ShoppingListAPI.Service\\ProductService.cs",
+              "RelativeDocumentMoniker": "ShoppingListAPI.Service\\ProductService.cs",
+              "ToolTip": "T:\\Group A\\C#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\ShoppingListAPI\\ShoppingListAPI.Service\\ProductService.cs",
+              "RelativeToolTip": "ShoppingListAPI.Service\\ProductService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T12:58:37.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "T:\\Group A\\C#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\ShoppingListAPI\\ShoppingListAPI.core\\Repositories\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingListAPI.core\\Repositories\\IProductRepository.cs",
+              "ToolTip": "T:\\Group A\\C#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\ShoppingListAPI\\ShoppingListAPI.core\\Repositories\\IProductRepository.cs",
+              "RelativeToolTip": "ShoppingListAPI.core\\Repositories\\IProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T12:48:43.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "T:\\Group A\\C#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\ShoppingListAPI\\ShoppingListAPI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "ShoppingListAPI\\Controllers\\ProductController.cs",
+              "ToolTip": "T:\\Group A\\C#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\ShoppingListAPI\\ShoppingListAPI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "ShoppingListAPI\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAqwDcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T12:46:29.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "T:\\Group A\\C#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\ShoppingListAPI\\ShoppingListAPI.Data\\DataContext.cs",
+              "RelativeDocumentMoniker": "ShoppingListAPI.Data\\DataContext.cs",
+              "ToolTip": "T:\\Group A\\C#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\ShoppingListAPI\\ShoppingListAPI.Data\\DataContext.cs",
+              "RelativeToolTip": "ShoppingListAPI.Data\\DataContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T12:46:05.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "T:\\Group A\\C#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\ShoppingListAPI\\ShoppingListAPI.Data\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingListAPI.Data\\Repositories\\ProductRepository.cs",
+              "ToolTip": "T:\\Group A\\C#\\.net\\\u05DE\u05E2\u05D9\u05D9\u05DF \u05D1\u05D5\u05E7\u05E8\u05D9\u05E5\\ShoppingListAPI\\ShoppingListAPI.Data\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "ShoppingListAPI.Data\\Repositories\\ProductRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACIAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T12:46:03.029Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
