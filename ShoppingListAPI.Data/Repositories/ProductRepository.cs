@@ -35,12 +35,27 @@ namespace ShoppingListAPI.Data.Repositories
             var p = _context.product.FindIndex(x => x.Id == id);
             _context.product.Add(product);
         }
-        public void  Delete(int id)
+
+        public Product Add(Product product)
         {
-            var p = _context.product.Find(y => y.Id == id);
-            _context.product.Remove(p);
+            _context.product.Add(product);
+            return product;
+            
         }
 
-    
+        public Product Update(int id, Product product)
+        {
+            var s=GetById(product.Id);
+            s.Name = product.Name;
+            s.Category = product.Category;
+            s.IsAvailable = product.IsAvailable;
+            return s;
+
+        }
+        public void Delete(int id)
+        {
+            var s=GetById(id);
+            _context.product.Remove(s);
+        }
     }
 }

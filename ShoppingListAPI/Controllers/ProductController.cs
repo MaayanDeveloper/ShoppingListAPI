@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ShoppingListAPI.Core.Models;
+using ShoppingListAPI.Core.Services;
 using System;
 using System.Reflection;
 using System.Security.Cryptography;
@@ -13,7 +15,6 @@ namespace ShoppingListAPI.Controllers
         private readonly IProductService _productService;
     
 
-        private readonly IDataContext _Context;
         public ProductController(IProductService productService)
         {
             _productService = productService;
@@ -21,7 +22,7 @@ namespace ShoppingListAPI.Controllers
         [HttpGet]
         public ActionResult Get()
         {
-            return OK(_productService.GetProduct());
+            return Ok(_productService.GetProduct());
         }
 
         //GET api/<ProductController>/id
@@ -40,38 +41,35 @@ namespace ShoppingListAPI.Controllers
         [HttpPost]
         public ActionResult Post([FromBody] Product value)
         {
-            var e= _Context.product.Find(x => x.Id==value.Id);
+            var e= _productService.GetById(value.Id);
             if (e != null)
             {
                 return Conflict();
             }
-           _productService.Add(value); 
-            return Ok(value);
+           var s= _productService.Add(value); 
+            return Ok(s);
         }
         
         // PUT api/<ProductController>/5
         [HttpPut("{id}")]
         public ActionResult Put(int id, [FromBody] Product value)
         {
-            var p = _productService.FindIndex(x => x.Id == id);
-            if(p!= -1)
+            var p = _productService.GetById(id);
+            if(p==null)
             {
-               _productService[p].Id = value.Id;
-                _productService[p].Name = value.Name;
-                _productService[p].Category = value.Category;
-                return Ok(_productService[p]);
+                return BadRequest();
             }
-            return NotFound();
+            return Ok(_productService.Update(id, p));
         }
 
         // DELETE api/<ProductController>/5
         [HttpDelete("{id}")]
         public ActionResult Delete(int id)
         {
-            var p = _productService.Find(y => y.Id == id);
+            var p = _productService.GetById(id);
             if(p != null)
             {
-                _productService.Remove(p);
+                _productService.Delete(id);
                 return Ok();
             }
             return NotFound();

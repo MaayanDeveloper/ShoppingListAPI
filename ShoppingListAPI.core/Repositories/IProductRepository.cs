@@ -13,9 +13,9 @@ namespace ShoppingListAPI.Core.Repositories
 
         public Product GetById(int id);
 
-        public void Post(Product product);
+        public Product Add(Product product);
 
-        public void Put(Product product);
+        public Product Update(int id, Product product);
 
         public void Delete(int id);
     }

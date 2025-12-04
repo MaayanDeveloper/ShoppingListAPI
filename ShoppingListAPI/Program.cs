@@ -1,4 +1,11 @@
+using Microsoft.Extensions.DependencyInjection;
 using ShoppingListAPI;
+using ShoppingListAPI.Core.Repositories;
+using ShoppingListAPI.Core.Services;
+using ShoppingListAPI.Data;
+using ShoppingListAPI.Data.Repositories;
+using ShoppingListAPI.Service;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,10 +16,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScope<IProductRepository, ProductRepository>();
-builder.Services.AddScope<IProductService, ProductService>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
-builder.Services.AddSingleton<IDataContext, DataContext>(); 
+builder.Services.AddSingleton<DataContext>(); 
 
 var app = builder.Build();
 
