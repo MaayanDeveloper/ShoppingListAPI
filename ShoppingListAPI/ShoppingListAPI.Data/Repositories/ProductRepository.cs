@@ -57,5 +57,9 @@ namespace ShoppingListAPI.Data.Repositories
             var s=GetById(id);
             _context.product.Remove(s);
         }
+        public void Save()
+        {
+            _context.SaveChanges();
+        }
     }
 }

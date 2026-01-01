@@ -34,11 +34,13 @@ namespace ShoppingListAPI.Service
 
         public Product Update(int id, Product product)
         {
+            _productRepository.Save();
             return _productRepository.Update(id, product);
         }
 
         public void Delete(int id)
         {
+            _productRepository.Save();
             _productRepository.Delete(id);
         }
     }

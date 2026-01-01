@@ -18,5 +18,8 @@ namespace ShoppingListAPI.Core.Repositories
         public Product Update(int id, Product product);
 
         public void Delete(int id);
+        public void Save();
+
     }
+
 }

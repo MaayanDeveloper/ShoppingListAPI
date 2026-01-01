@@ -9,4 +9,5 @@ namespace ShoppingListAPI.Core.Repositories
     public interface IShopListRepository
     {
     }
+
 }
