@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using ShoppingListAPI.Core.DTO;
 using ShoppingListAPI.Core.Models;
 using ShoppingListAPI.Core.Services;
 using System;
@@ -13,16 +15,20 @@ namespace ShoppingListAPI.Controllers
         
     {
         private readonly IProductService _productService;
+        private readonly IMapper _mapper;
     
 
-        public ProductController(IProductService productService)
+        public ProductController(IProductService productService, IMapper mapper)
         {
             _productService = productService;
+            _mapper = mapper;
+
         }
         [HttpGet]
         public ActionResult Get()
         {
-            return Ok(_productService.GetProduct());
+            var product = _productService.GetProduct();
+            return Ok(_mapper.Map<List<productDTO>>(product));
         }
 
         //GET api/<ProductController>/id
@@ -32,7 +38,8 @@ namespace ShoppingListAPI.Controllers
             var p = _productService.GetById(id);
             if (p != null)
             {
-                return Ok(p);
+                var pro= _mapper.Map<productDTO>(p);
+                return Ok(pro);
             }
             return NotFound();
         }
@@ -55,9 +62,10 @@ namespace ShoppingListAPI.Controllers
         public ActionResult Put(int id, [FromBody] Product value)
         {
             var p = _productService.GetById(id);
-            if(p==null)
+            if(p == null)
             {
-                return NotFound();
+                var product= _mapper.Map<Product>(value);
+                return Conflict();
             }
             return Ok(_productService.Update(id, value));
         }

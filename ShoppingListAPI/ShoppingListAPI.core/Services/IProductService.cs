@@ -11,6 +11,7 @@ namespace ShoppingListAPI.Core.Services
     {
 
         public List<Product> GetProduct();
+        public Product GetByIdentity(String id);
 
         public Product GetById(int id);
 

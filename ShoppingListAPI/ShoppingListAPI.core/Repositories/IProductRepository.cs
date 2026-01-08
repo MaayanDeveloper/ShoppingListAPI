@@ -19,7 +19,7 @@ namespace ShoppingListAPI.Core.Repositories
 
         public void Delete(int id);
         public void Save();
-
+        Product GetByIdentity(string id);
     }
 
 }

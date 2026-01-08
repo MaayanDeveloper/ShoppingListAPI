@@ -27,6 +27,11 @@ namespace ShoppingListAPI.Service
             return _productRepository.GetById(id);
         }
 
+        public Product GetByIdentity(String id)
+        {
+            return _productRepository.GetByIdentity(id);
+        }
+
         public Product Add(Product product)
         {
             return _productRepository.Add(product);
