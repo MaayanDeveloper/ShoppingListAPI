@@ -10,15 +10,16 @@ namespace ShoppingListAPI.Core.Services
     public interface IProductService
     {
 
-        public List<Product> GetProduct();
-        public Product GetByIdentity(String id);
+        public Task< List<Product>> GetProductAsync();
+        public Task<Product> GetByIdentityAsync(string id);
 
-        public Product GetById(int id);
 
-        public Product Add(Product product);
+        public Task<Product> GetByIdAsync(int id);
 
-        public Product Update(int id, Product product);
+        public Task<Product> AddAsync(Product product);
 
-        public void Delete(int id);
+        public Task<Product> UpdateAsync(int id, Product product);
+
+        public Task DeleteAsync(int id);
     }
 }

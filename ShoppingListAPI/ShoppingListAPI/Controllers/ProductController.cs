@@ -25,17 +25,17 @@ namespace ShoppingListAPI.Controllers
 
         }
         [HttpGet]
-        public ActionResult Get()
+        public async Task<ActionResult > Get()
         {
-            var product = _productService.GetProduct();
+            var product = await _productService.GetProductAsync();
             return Ok(_mapper.Map<List<productDTO>>(product));
         }
 
         //GET api/<ProductController>/id
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public async Task<ActionResult> Get(int id)
         {
-            var p = _productService.GetById(id);
+            var p = await _productService.GetByIdAsync(id);
             if (p != null)
             {
                 var pro= _mapper.Map<productDTO>(p);
@@ -46,41 +46,56 @@ namespace ShoppingListAPI.Controllers
 
         // POST api/<ProductController>
         [HttpPost]
-        public ActionResult Post([FromBody] Product value)
+        public  async Task<ActionResult> Post([FromBody] Product value)
         {
-            var e= _productService.GetById(value.Id);
+            var e= await _productService.GetByIdAsync(value.Id);
             if (e != null)
             {
                 return Conflict();
             }
-           var s= _productService.Add(value); 
+            var s = await _productService.AddAsync(value);
             return Ok(s);
+
         }
-        
+
         // PUT api/<ProductController>/5
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody] Product value)
+        public async Task<ActionResult> Put(int id, [FromBody] Product value)
         {
-            var p = _productService.GetById(id);
+            var p = await _productService.GetByIdAsync(id);
             if(p == null)
             {
                 var product= _mapper.Map<Product>(value);
                 return Conflict();
             }
-            return Ok(_productService.Update(id, value));
+            var updated = await _productService.UpdateAsync(id, value);
+            return Ok(updated);
+
         }
 
         // DELETE api/<ProductController>/5
         [HttpDelete("{id}")]
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            var p = _productService.GetById(id);
+            var p = await _productService.GetByIdAsync(id);
             if(p != null)
             {
-                _productService.Delete(id);
+                await _productService.DeleteAsync(id);
                 return Ok();
             }
             return NotFound();
         }
     }
 }
+
+
+
+
+//הערות לפרוייקט// מעיין בוקריץ וחיה שפרונג:
+//•	אנחנו מגישות את הפרוייקט יחד באישור המורה. 
+
+//•	דבר נוסף, יש לנו 3 מחלקות אך כרגע רק אחת מתוכן (product) ממומשת כי יש בהן קשרי גומלין. (שאלנו, ואמרת לנו כרגע לא לעשות, אם אפשר כבר לעשות נעבוד על זה בקרוב ממש בעז"ה...)
+
+//•	בקשר לשיעור האחרון, הרבה פונקציות עשינו אסינכרוניות (אע"פ שלפי הכללים לא אמור להיות, אבל בדקנו עם GPT וזה הדבר היחיד שתיקן את השגיאות...)
+
+//תודה רבה!!!

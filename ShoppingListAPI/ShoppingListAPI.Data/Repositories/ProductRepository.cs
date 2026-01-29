@@ -1,4 +1,5 @@
-﻿using ShoppingListAPI.Core.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using ShoppingListAPI.Core.Models;
 using ShoppingListAPI.Core.Repositories;
 using System;
 using System.Collections.Generic;
@@ -17,49 +18,62 @@ namespace ShoppingListAPI.Data.Repositories
         {
             _context = context;
         }
-        public List<Product> GetProduct()
+        public async Task<List<Product>> GetProductAsync()
         {
-            return _context.product.ToList();
+            return await _context.product.ToListAsync();
         }
 
-        public Product GetById(int id)
+        public async Task<Product> GetByIdAsync(int id)
         {
-            return _context.product.ToList().Find(p => p.Id == id);
+            return await _context.product.FirstOrDefaultAsync(p => p.Id == id);
         }
-        public void Post(Product product)
-        {
-            _context.product.Add(product);
-        }
+
+        //public void PostAsync(Product product)
+        //{
+        //    _context.product.Add(product);
+        //}
         //public void Put(int id, Product product)
         //{
         //    var p = _context.product.FindIndex(x => x.Id == id);
         //    _context.product.Add(product);
         //}
 
-        public Product Add(Product product)
+        public async Task<Product> AddAsync(Product product)
         {
             _context.product.Add(product);
+            await _context.SaveChangesAsync();
             return product;
-            
         }
 
-        public Product Update(int id, Product product)
+
+        public async Task<Product> UpdateAsync(int id, Product product)
         {
-            var s=GetById(product.Id);
+            var s = await GetByIdAsync(id);
             s.Name = product.Name;
             s.Category = product.Category;
             s.IsAvailable = product.IsAvailable;
+            await _context.SaveChangesAsync();
             return s;
+        }
 
-        }
-        public void Delete(int id)
+        public async Task DeleteAsync(int id)
         {
-            var s=GetById(id);
+            var s = await GetByIdAsync(id);
             _context.product.Remove(s);
+            await _context.SaveChangesAsync();
         }
-        public void Save()
+
+        public async Task SaveAsync()
         {
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
+        public async Task<Product> GetByIdentityAsync(string id)
+        {
+            int productId = int.Parse(id); // המרה ממחרוזת למספר
+            return await _context.product.FirstOrDefaultAsync(p => p.Id == productId);
+        }
+
+
+
     }
 }

@@ -9,17 +9,17 @@ namespace ShoppingListAPI.Core.Repositories
 {
     public interface IProductRepository
     {
-        public List<Product> GetProduct();
+        public Task<List<Product>> GetProductAsync();
 
-        public Product GetById(int id);
+        public Task< Product> GetByIdAsync(int id);
 
-        public Product Add(Product product);
+        public Task<Product> AddAsync(Product product);
 
-        public Product Update(int id, Product product);
+        public Task<Product> UpdateAsync(int id, Product product);
 
-        public void Delete(int id);
-        public void Save();
-        Product GetByIdentity(string id);
+        public Task DeleteAsync(int id);
+        public Task SaveAsync();
+        Task<Product> GetByIdentityAsync(string id);
     }
 
 }

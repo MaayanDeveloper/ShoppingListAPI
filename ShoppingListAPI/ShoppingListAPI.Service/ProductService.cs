@@ -17,36 +17,44 @@ namespace ShoppingListAPI.Service
             _productRepository = productRepository;
         }
 
-        public List<Product> GetProduct()
+        public async Task<List<Product>> GetProductAsync()
         {
-            return _productRepository.GetProduct();
+            return await _productRepository.GetProductAsync();
         }
 
-        public Product GetById(int id)
+
+        public async Task< Product> GetByIdAsync(int id)
         {
-            return _productRepository.GetById(id);
+            return await  _productRepository.GetByIdAsync(id);
         }
 
-        public Product GetByIdentity(String id)
+        public async Task<Product> GetByIdentityAsync(string id)
         {
-            return _productRepository.GetByIdentity(id);
+            return await _productRepository.GetByIdentityAsync(id);
         }
 
-        public Product Add(Product product)
+
+
+
+        public async Task<Product> AddAsync(Product product)
         {
-            return _productRepository.Add(product);
+            var s = await _productRepository.AddAsync(product);
+            return s;
         }
 
-        public Product Update(int id, Product product)
+
+        public async Task<Product> UpdateAsync(int id, Product product)
         {
-            _productRepository.Save();
-            return _productRepository.Update(id, product);
+            var updated = await _productRepository.UpdateAsync(id, product);
+            return updated;
         }
 
-        public void Delete(int id)
+
+        public async Task DeleteAsync(int id)
         {
-            _productRepository.Save();
-            _productRepository.Delete(id);
+            await _productRepository.DeleteAsync(id);
         }
+
+
     }
 }
