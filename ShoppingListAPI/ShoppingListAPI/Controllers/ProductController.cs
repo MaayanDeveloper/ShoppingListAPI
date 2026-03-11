@@ -57,9 +57,15 @@ namespace ShoppingListAPI.Controllers
             var p = _productService.GetById(id);
             if(p==null)
             {
+
+                return BadRequest();
+            }
+            return Ok(_productService.Update(id, p));
+
                 return NotFound();
             }
             return Ok(_productService.Update(id, value));
+
         }
 
         // DELETE api/<ProductController>/5
