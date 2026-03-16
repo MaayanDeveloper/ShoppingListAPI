@@ -1,59 +1,69 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
-using ShoppingListAPI.Core.DTO;
-using ShoppingListAPI.Core.Models;
-using ShoppingListAPI.Core.Services;
-using ShoppingListAPI.Models;
+﻿//using Microsoft.AspNetCore.Mvc;
 
-namespace ShoppingListAPI.Controllers
-{
-    [Route("api/[controller]")]
-    [ApiController]
-    public class userOController : ControllerBase
-    {
-        private readonly IUserOService _userOService;
-        private readonly IMapper _mapper;
+//namespace ShoppingListAPI.Controllers
+//{
+//    [Route("api/[controller]")]
+//    [ApiController]
+//    public class UserOController : ControllerBase
+//    {
+//        public static List<UserO> user = new List<UserO> { new UserO {Id= 1, Name="Yosi", Email="5265@gmail.com"},
+//        new UserO {Id=2, Name="israel", Email="54541@gmail.com"} };
 
-        public userOController(IUserOService userOService, IMapper mapper)
-        {
-            _userOService = userOService;
-            _mapper = mapper;
-        }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult> Get(int id)
-        {
-            var user = await _userOService.GetUserByIdAsync(id);
-            if (user != null)
-            {
-                var pro = _mapper.Map<UserDTO>(user);
-                return Ok(pro);
-            }
-            return NotFound();
-        }
+//        // GET: api/<UserOController>
+//        [HttpGet]
+//        public IEnumerable<UserO> Get()
+//        {
+//            return user;
+//        }
 
-        [HttpPost]
-        public async Task<ActionResult> Post([FromBody] UserPostModel value)
-        {
-            var user = await _userOService.GetUserByIdAsync(value.Key);
-            if (user != null)
-            {
-                return Conflict();
-            }
-            var e = _mapper.Map<UserO>(value);
-            var s = await _userOService.RegisterUserAsync(e);
-            return Ok(s);
-        }
+//        //GET api/<UserOController>/id
+//        [HttpGet("{id}")]
+//        public ActionResult Get(int id)
+//        {
+//            var p = user.Find(x => x.Id == id);
+//            if (p != null)
+//            {
+//                return Ok(p);
+//            }
+//            return NotFound();
+//        }
 
-        //[HttpPost("login")]
-        //public async Task<ActionResult> Login([FromBody] LoginPostModel loginData)
-        //{
-        //    var user = await _userOService.LoginAsync(loginData.Email, loginData.Password);
-        //    if (user == null)
-        //    {
-        //        return Unauthorized("Incorrect email or password");
-        //    }
-        //    return Ok(_mapper.Map<UserDTO>(user));
-        //}
-    }
-}
+//        // POST api/<UserOController>
+//        [HttpPost]
+//        public void Post([FromBody] UserO value)
+//        {
+//            user.Add(value);
+//        }
+
+//        // PUT api/<UserOController>/5
+//        [HttpPut("{id}")]
+//        public ActionResult Put(int id, [FromBody] UserO value)
+//        {
+//            var p = user.FindIndex(x => x.Id == id);
+//            if (p != -1)
+//            {
+//                user[p].Id = value.Id;
+//                user[p].Name = value.Name;
+//                user[p].Email = value.Email;
+//                return Ok(user[p]);
+//            }
+//            return NotFound();
+//        }
+
+//        // DELETE api/<UserOController>/5
+//        [HttpDelete("{id}")]
+//        public ActionResult Delete(int id)
+//        {
+//            var p = user.Find(y => y.Id == id);
+//            if (p != null)
+//            {
+//                user.Remove(p);
+//                return Ok();
+//            }
+//            return NotFound();
+
+//        }
+//    }
+//}
+

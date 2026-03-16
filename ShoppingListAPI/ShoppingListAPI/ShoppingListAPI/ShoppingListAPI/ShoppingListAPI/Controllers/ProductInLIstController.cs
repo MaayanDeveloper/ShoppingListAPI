@@ -1,5 +1,6 @@
 ﻿
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ShoppingListAPI.Core.DTO;
 using ShoppingListAPI.Core.Models;
@@ -11,6 +12,7 @@ namespace ShoppingListAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductInLIstController : ControllerBase
     {
         private readonly IProductInListService _productInListService;

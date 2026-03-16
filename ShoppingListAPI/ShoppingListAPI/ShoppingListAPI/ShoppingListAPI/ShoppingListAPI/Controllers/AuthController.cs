@@ -30,8 +30,8 @@ namespace ShoppingListAPI.Controllers
             {
                 var claims = new List<Claim>()
                 {
-                     new Claim(ClaimTypes.Name, "malkabr"),
-                     new Claim(ClaimTypes.Role, "teacher")
+                     new Claim(ClaimTypes.Name, user.Name),
+                     new Claim(ClaimTypes.Role, user.Role)
                 };
                 {
                     var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Key"]));

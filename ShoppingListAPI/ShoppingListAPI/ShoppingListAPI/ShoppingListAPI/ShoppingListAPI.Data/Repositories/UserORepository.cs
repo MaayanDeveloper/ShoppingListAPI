@@ -18,7 +18,7 @@ namespace ShoppingListAPI.Data.Repositories
         }
         public async Task<UserO> GetUserByIdAsync(int id)
         {
-            return await _context.UserOs.FirstOrDefaultAsync(p => p.Key == id);
+            return await _context.UserOs.FirstOrDefaultAsync(p => p.Identity == id);
         }
         public async Task<UserO> RegisterUserAsync(UserO user)
         {

@@ -10,8 +10,8 @@ namespace ShoppingListAPI
         public MappingPostModels()
         {
             CreateMap<ProductPostModels, Product>();
-            CreateMap<Product, productDTO>()
-                .ForMember(dest => dest.Id, opt => opt.Ignore());
+            CreateMap<Product, productDTO>();
+                //.ForMember(dest => dest.Id, opt => opt.Ignore());
 
             CreateMap<ProductInLIst, ProductInListDTO>()
                 .ForMember(dest => dest.ProductName, opt => opt.MapFrom(src => src.Product.Name));
