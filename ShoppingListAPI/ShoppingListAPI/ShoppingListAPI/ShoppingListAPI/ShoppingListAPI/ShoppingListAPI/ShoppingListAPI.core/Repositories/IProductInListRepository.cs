@@ -9,6 +9,7 @@ namespace ShoppingListAPI.Core.Repositories
 {
     public interface IProductInListRepository
     {
-        Task<ProductInLIst> AddProductToListAsync(ProductInLIst item);
+        public Task<ProductInLIst> AddProductToListAsync(ProductInLIst item);
+        public Task<bool> DeleteProductFromListAsync(int id);
     }
 }

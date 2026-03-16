@@ -20,5 +20,9 @@ namespace ShoppingListAPI.Service
         {
             return await _repository.AddProductToListAsync(item);
         }
+        public async Task<bool> DeleteAsync(int id)
+        {
+            return await _repository.DeleteProductFromListAsync(id);
+        }
     }
 }

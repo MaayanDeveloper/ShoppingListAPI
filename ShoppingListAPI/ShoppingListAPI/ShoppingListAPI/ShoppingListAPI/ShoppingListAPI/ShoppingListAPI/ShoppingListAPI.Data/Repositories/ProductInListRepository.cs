@@ -25,5 +25,18 @@ namespace ShoppingListAPI.Data.Repositories
                 .Include(p => p.Product)
                     .FirstOrDefaultAsync(p => p.Key == item.Key);
         }
+
+        public async Task<bool> DeleteProductFromListAsync(int id)
+        {
+            var productInList = await _context.ProductIns.FindAsync(id);
+            if (productInList == null)
+            {
+                return false; // לא נמצא, אז אי אפשר למחוק
+            }
+
+            _context.ProductIns.Remove(productInList);
+            await _context.SaveChangesAsync();
+            return true;
+        }
     }
 }

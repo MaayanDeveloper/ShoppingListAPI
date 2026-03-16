@@ -9,6 +9,7 @@ namespace ShoppingListAPI.Core.Services
 {
     public interface IProductInListService
     {
-        Task<ProductInLIst> AddProductToListAsync(ProductInLIst item);
+        public Task<ProductInLIst> AddProductToListAsync(ProductInLIst item);
+        public Task<bool> DeleteAsync(int id);
     }
 }

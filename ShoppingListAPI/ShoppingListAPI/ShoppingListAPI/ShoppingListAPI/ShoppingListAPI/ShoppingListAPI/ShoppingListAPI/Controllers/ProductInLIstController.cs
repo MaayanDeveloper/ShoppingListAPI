@@ -31,5 +31,16 @@ namespace ShoppingListAPI.Controllers
             var dtoToReturn = _mapper.Map<ProductInListDTO>(result);
             return Ok(dtoToReturn);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var isDeleted = await _productInListService.DeleteAsync(id);
+            if (!isDeleted)
+            {
+                return NotFound("המוצר לא נמצא ברשימה");
+            }
+            return NoContent(); 
+        }
     }
 }
