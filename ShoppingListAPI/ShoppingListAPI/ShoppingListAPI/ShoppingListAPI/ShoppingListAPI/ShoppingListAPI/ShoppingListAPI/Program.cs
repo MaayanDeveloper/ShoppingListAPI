@@ -20,6 +20,18 @@ builder.Services.AddControllers().AddJsonOptions(options =>
     options.JsonSerializerOptions.PropertyNamingPolicy = null;
 });
 
+//builder.Services.AddCors(options =>
+//{
+//    options.AddPolicy("AllowReactApp",
+//        policy =>
+//        {
+//            policy.WithOrigins("http://localhost:5173") // הכתובת שבה ה-React שלך רץ
+//                  .AllowAnyHeader()
+//                  .AllowAnyMethod();
+//        });
+//});
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
