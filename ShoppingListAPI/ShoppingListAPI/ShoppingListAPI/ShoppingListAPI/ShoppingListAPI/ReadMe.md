@@ -19,7 +19,7 @@ Instead of trying to remember what's missing right before you head out, this app
 3. **Receive:** Once a week, get a consolidated shopping list tailored to your actual needs.
 
 ## 💻 Tech Stack
-* **Backend:** ASP.NET Core Web API (C#)
+* **Backend:** Net Core
 * **Architecture:** RESTful API with Asynchronous programming patterns.
 * **Database:** Entity Framework Core
 * **Data Format:** JSON
