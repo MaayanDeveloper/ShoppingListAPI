@@ -31,7 +31,7 @@ Once the application is running, you can explore and test the API endpoints via 
 This project includes automated tests to ensure logic integrity.
 
 
-* ## ▶️ How to Run
+## ▶️ How to Run
 1. Clone the repository
 2. Open the solution in Visual Studio
 3. Run the project (F5)
