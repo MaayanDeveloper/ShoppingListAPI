@@ -21,5 +21,9 @@ Instead of trying to remember what's missing right before you head out, this app
 ## 💻 Tech Stack
 * **Backend:** Net Core
 * **Architecture:** RESTful API with Asynchronous programming patterns.
-* **Database:** Entity Framework Core
-* **Data Format:** JSON
+* **Database:** SQL SERVER
+
+* ## ▶️ How to Run
+1. Clone the repository
+2. Open the solution in Visual Studio
+3. Run the project (F5)
