@@ -20,8 +20,16 @@ Instead of trying to remember what's missing right before you head out, this app
 
 ## 💻 Tech Stack
 * **Backend:** Net Core
+* **Framework:** .NET 8 SDK
 * **Architecture:** RESTful API with Asynchronous programming patterns.
 * **Database:** SQL SERVER
+
+## 📑 API Documentation
+Once the application is running, you can explore and test the API endpoints via Swagger UI at: https://localhost:7017/swagger/index.html
+
+## 🔎Testing
+This project includes automated tests to ensure logic integrity.
+
 
 * ## ▶️ How to Run
 1. Clone the repository
